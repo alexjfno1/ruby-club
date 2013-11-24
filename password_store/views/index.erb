@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password Store App</title>
+	<link type=text/css rel=stylesheet href=app.css/>
+</head>
+<body>
+	<h1>Password Store App</h1>
+	<form method=POST action='/account' name=select-account>
+		<select name=accounts class=account-select>
+			<% @accounts.each do |account| %>
+				<option value='<%= account %>'><%= account %></option>
+			<% end %>
+		</select>
+		<button type=submit>Get Password</button>
+	</form>
+</body>
+</html>
+
